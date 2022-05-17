@@ -1,0 +1,76 @@
+.skill_web {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #303030;
+    .title_skill{
+        font-weight: bold;
+        text-align: center;
+        font-size: calc(1.3rem + 0.6vw);
+        margin-bottom: 3PX;
+    }
+    .skill_item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 6px;
+        
+        .skill {
+            > div {
+                width: 80px;
+                height: 83px;
+                float: left;
+                margin: 5px;
+                text-align: center;
+                i {
+                    font-size: 50px;
+                }
+
+                .fa-img {
+                    width: 50px;
+                    height: 50px;
+                }
+            } 
+
+            .name_skill {
+                text-align: start;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .skill_web {
+        .title_skill {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .skill_web {
+        .skill_item {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}
+
+@media (max-width: 769px){
+    .skill_web {
+        .skill_item{
+            padding: 0px;
+            .skill {
+                > div {
+                    width: 80px;
+                    height: 80px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}

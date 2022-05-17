@@ -1,0 +1,35 @@
+.card {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    border: 0;
+
+    img {
+        height: 245px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        color: #303030;
+        font-weight: bold;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+
+
+    .portfolio-links {
+        display: flex;
+        
+        a {
+            color: #fff;
+            font-size: 32px;
+            text-align: center;
+            background: rgba(33, 37, 41, 0.82);
+            width: 100%;
+            text-decoration: none;
+        }
+        :hover {
+            background-color: #1f2534;
+            transition: ease-in 0.25s;
+        }
+    }
+}

@@ -1,1 +1,17 @@
-<p>my-work works!</p>
+<div class="container mt-5 mb-5 animated fadeIn">
+    <div class="row g-4">
+        <div *ngFor="let work of workPortfolio" class="col-md-4">
+            <div class="card h-100">
+                <img [src]="work?.image" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{ work.title }}</h5>
+                    <p class="card-text">{{ work.description }}</p>
+                </div>
+                <div class="portfolio-links">
+                    <a [href]="work?.demo" target="_blanck"><i class="fa-solid fa-link"></i></a>
+                    <a [href]="work?.url" target="_blanck" style="border-left: 1px solid #fff;"><i class="fa-brands fa-github-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

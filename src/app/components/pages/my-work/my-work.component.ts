@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyWorkComponent implements OnInit {
 
-  constructor() { }
+  workPortfolio: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getWorkPortfolio();
+  }
+
+  getWorkPortfolio() {
+    this.http.get('http://localhost:4200/assets/data/work.json')
+    .subscribe((work) => {
+      this.workPortfolio = work;
+    });
   }
 
 }
